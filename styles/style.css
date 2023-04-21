@@ -9,7 +9,7 @@
 
 body {
   margin:0;
-  background-image: url("./images/prikbord.jpg");
+  background-image: url("../images/prikbord.jpg");
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -115,6 +115,7 @@ ul li {
   max-width: 15%;
   height: auto;
   margin-left: 20em;
+  transform: translate(400%);
 }
 
 .punaise-6 {
