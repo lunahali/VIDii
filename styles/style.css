@@ -9,15 +9,120 @@
 
 body {
   margin:0;
+  background-image: url("/images/prikbord.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 button:not([disabled]) {
   cursor:pointer;
 }
 
+ul, li {
+  list-style: none;
+  display: inline-block;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+ul li a {
+  text-decoration: none;
+
+}
+
+.kind {
+  display: flex;
+  position: relative;
+  max-width: 12%;
+  height: auto;
+}
 
 
+ul li {
+  margin: 1em;
+}
 
+.punaise-1 {
+  position: absolute;
+  max-width: 4%;
+  height: auto;
+  transform: translate(80%, -460%);
+
+}
+
+.school {
+  display: flex;
+  position: relative;
+  max-width: 20%;
+  height: auto;
+  margin-left: 70em;
+}
+
+.punaise-2 {
+  position: absolute;
+  max-width: 4%;
+  height: auto;
+  transform: translate(1850%, -290%);
+}
+
+.lynda {
+  max-width: 10%;
+  height: auto;
+  rotate: 15deg;
+  margin-left: 20em;
+}
+
+.roberta {
+  max-width: 14%;
+  height: auto;
+  rotate: -5deg;
+}
+
+.brenda {
+  max-width: 8%;
+  height: auto;
+  rotate: 8deg;
+}
+
+.punaise-3 {
+  position: absolute;
+  max-width: 4%;
+  height: auto;
+  transform: translate(-690%, 100%);
+}
+
+.punaise-4 {
+  position: absolute;
+  max-width: 4%;
+  height: auto;
+  transform: translate(-450%);
+}
+
+.punaise-5 {
+  position: absolute;
+  max-width: 4%;
+  height: auto;
+  transform: translate(-140%, 40%);
+}
+
+.auto {
+  max-width: 15%;
+  height: auto;
+  margin-left: 20em;
+}
+
+.punaise-6 {
+  position: absolute;
+  max-width: 4%;
+  height: auto;
+  transform: translate(430%, -1150%);
+}
 
 /*********************/
 /* CUSTOM PROPERTIES */
@@ -26,6 +131,8 @@ button:not([disabled]) {
 :root {
   --color-headings:crimson
 }
+
+
 
 
 

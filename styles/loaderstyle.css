@@ -1,0 +1,54 @@
+@font-face {
+    font-family: Bloody;
+    src: url(/bloody-webfont.woff);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-family: Bloody;
+}
+
+h1 {
+    position: absolute;
+    margin: auto;
+    text-align:center;
+    top: 70%;
+    color: red ;
+}
+
+img {
+    max-width: 60vh;
+}
+
+a {
+    position: absolute;
+    top: 80%;
+}
+
+button {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    padding: 12px 14px;
+}
+
+button:hover,
+button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+button:active {
+  opacity: .5;
+}
+
