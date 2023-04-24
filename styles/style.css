@@ -20,109 +20,249 @@ button:not([disabled]) {
   cursor:pointer;
 }
 
-ul, li {
+/* ul, li {
   list-style: none;
-  display: inline-block;
-}
+  display: inline;
+} */
 
-ul {
+/* ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-}
+} */
 
-ul li a {
+/* ul li a {
   text-decoration: none;
 
-}
+} */
 
-.kind {
+/* .kind {
   display: flex;
   position: relative;
   max-width: 12%;
   height: auto;
-}
+} */
 
 
+/* 
 ul li {
   margin: 1em;
-}
+} */
 
-.punaise-1 {
+/* .punaise-1 {
   position: absolute;
   max-width: 4%;
   height: auto;
   transform: translate(80%, -460%);
+} */
 
-}
-
-.school {
+/* .school {
   display: flex;
   position: relative;
   max-width: 20%;
   height: auto;
   margin-left: 70em;
-}
+} */
 
-.punaise-2 {
+/* .punaise-2 {
   position: absolute;
   max-width: 4%;
   height: auto;
   transform: translate(1850%, -290%);
-}
+} */
 
-.lynda {
+/* .lynda {
   max-width: 10%;
   height: auto;
   rotate: 15deg;
   margin-left: 20em;
-}
+} */
 
-.roberta {
+/* .roberta {
   max-width: 14%;
   height: auto;
   rotate: -5deg;
-}
+} */
 
-.brenda {
+/* .brenda {
   max-width: 8%;
   height: auto;
   rotate: 8deg;
-}
+} */
 
-.punaise-3 {
+/* .punaise-3 {
   position: absolute;
   max-width: 4%;
   height: auto;
   transform: translate(-690%, 100%);
-}
+} */
 
-.punaise-4 {
+/* .punaise-4 {
   position: absolute;
   max-width: 4%;
   height: auto;
   transform: translate(-450%);
-}
+} */
 
-.punaise-5 {
+/* .punaise-5 {
   position: absolute;
   max-width: 4%;
   height: auto;
   transform: translate(-140%, 40%);
-}
+} */
 
-.auto {
+/* .auto {
   max-width: 15%;
   height: auto;
-  margin-left: 20em;
-  transform: translate(400%);
-}
+  margin-left: 20em; */
+  /* transform: translate(0%, -230%);
+} */
 
-.punaise-6 {
+/* .punaise-6 {
   position: absolute;
   max-width: 4%;
   height: auto;
-  transform: translate(430%, -1150%);
+  transform: translate(-240%, -1170%);
+} */
+
+
+
+.main-content {
+  position: absolute;
+  padding: 0px;
+  width: 80%;
+  float: left;
+}
+
+.top {
+  position: relative;
+  max-width: 50%;
+}
+
+.middle {
+  position: relative;
+  max-width: 50%;
+}
+
+.bottom {
+  position: relative;
+  max-width: 50%;
+}
+
+img {
+  position: relative;
+  max-width: 30%;
+  top: 3em;
+}
+
+.punaise1 {
+  max-width: 10%;
+  height: auto;
+  left: -7.3em;
+  top: -12em;
+}
+
+.kind {
+  left: 2em;
+}
+
+.punaise2 {
+  max-width: 10%;
+  height: auto;
+  left: 9.5em;
+  top: -10em;
+}
+
+.auto {
+  left: 19em
+}
+
+.punaise3 {
+  max-width: 10%;
+  height: auto;
+  left: 20.5em;
+  top: -23em;
+}
+
+.mugshot {
+  left: 30em;
+  top: -8em;
+}
+
+.punaise4 {
+  max-width: 10%;
+  height: auto;
+  left: 68em;
+  top: -35em;
+}
+
+.brenda {
+  left: 75em;
+  top: -15em;
+  rotate: 10deg;
+}
+
+.punaise5 {
+  max-width: 10%;
+  height: auto;
+  left: 59em;
+  top: -30em;
+}
+
+.lynda {
+  left: 70em;
+  top: -17em;
+  rotate: -10deg;
+}
+
+.punaise6 {
+  max-width: 10%;
+  height: auto;
+  left: 53em;
+  top: -47em;
+}
+
+.roberta {
+  left: 63em;
+  top: -35em;
+  rotate: -8deg;
+}
+
+.punaise7 {
+  max-width: 10%;
+  height: auto;
+  right: 19.5em;
+  top: -37em;
+}
+
+.triple {
+  top: -20em;
+  right: 10em
+}
+
+.school {
+  left: 70em;
+  max-width: 60%;
+  top: -15em;
+}
+
+.punaise8 {
+  max-width: 10%;
+  height: auto;
+  left: 55em;
+  top: -25em;
+}
+
+.ontsnapping {
+left: 30em;
+top: -38em;
+}
+
+.punaise9 {
+  max-width: 10%;
+  height: auto;
+  left: 20em;
+  top: -48em;
 }
 
 /*********************/

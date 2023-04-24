@@ -39,6 +39,9 @@ button {
     cursor: pointer;
     display: inline-block;
     padding: 12px 14px;
+    animation-name: knop;
+    animation-duration: 6s;
+    animation-delay: 0s;
 }
 
 button:hover,
@@ -52,3 +55,12 @@ button:active {
   opacity: .5;
 }
 
+@keyframes knop {
+    0% {
+        opacity: 0; 
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
