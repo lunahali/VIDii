@@ -2,275 +2,16 @@
 /* CSS RESET */
 /*************/
 
-/* naar een idee van Jen Simmons */
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-body {
-  margin:0;
-  background-image: url("../images/prikbord.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-button:not([disabled]) {
-  cursor:pointer;
-}
-
-/* ul, li {
-  list-style: none;
-  display: inline;
-} */
-
-/* ul {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-} */
-
-/* ul li a {
-  text-decoration: none;
-
-} */
-
-/* .kind {
-  display: flex;
-  position: relative;
-  max-width: 12%;
-  height: auto;
-} */
 
 
-/* 
-ul li {
-  margin: 1em;
-} */
-
-/* .punaise-1 {
-  position: absolute;
-  max-width: 4%;
-  height: auto;
-  transform: translate(80%, -460%);
-} */
-
-/* .school {
-  display: flex;
-  position: relative;
-  max-width: 20%;
-  height: auto;
-  margin-left: 70em;
-} */
-
-/* .punaise-2 {
-  position: absolute;
-  max-width: 4%;
-  height: auto;
-  transform: translate(1850%, -290%);
-} */
-
-/* .lynda {
-  max-width: 10%;
-  height: auto;
-  rotate: 15deg;
-  margin-left: 20em;
-} */
-
-/* .roberta {
-  max-width: 14%;
-  height: auto;
-  rotate: -5deg;
-} */
-
-/* .brenda {
-  max-width: 8%;
-  height: auto;
-  rotate: 8deg;
-} */
-
-/* .punaise-3 {
-  position: absolute;
-  max-width: 4%;
-  height: auto;
-  transform: translate(-690%, 100%);
-} */
-
-/* .punaise-4 {
-  position: absolute;
-  max-width: 4%;
-  height: auto;
-  transform: translate(-450%);
-} */
-
-/* .punaise-5 {
-  position: absolute;
-  max-width: 4%;
-  height: auto;
-  transform: translate(-140%, 40%);
-} */
-
-/* .auto {
-  max-width: 15%;
-  height: auto;
-  margin-left: 20em; */
-  /* transform: translate(0%, -230%);
-} */
-
-/* .punaise-6 {
-  position: absolute;
-  max-width: 4%;
-  height: auto;
-  transform: translate(-240%, -1170%);
-} */
-
-
-
-.main-content {
-  position: absolute;
-  padding: 0px;
-  width: 80%;
-  float: left;
-}
-
-.top {
-  position: relative;
-  max-width: 50%;
-}
-
-.middle {
-  position: relative;
-  max-width: 50%;
-}
-
-.bottom {
-  position: relative;
-  max-width: 50%;
-}
-
-img {
-  position: relative;
-  max-width: 30%;
-  top: 3em;
-}
-
-.punaise1 {
-  max-width: 10%;
-  height: auto;
-  left: -7.3em;
-  top: -12em;
-}
-
-.kind {
-  left: 2em;
-}
-
-.punaise2 {
-  max-width: 10%;
-  height: auto;
-  left: 9.5em;
-  top: -10em;
-}
-
-.auto {
-  left: 19em
-}
-
-.punaise3 {
-  max-width: 10%;
-  height: auto;
-  left: 20.5em;
-  top: -23em;
-}
-
-.mugshot {
-  left: 30em;
-  top: -8em;
-}
-
-.punaise4 {
-  max-width: 10%;
-  height: auto;
-  left: 68em;
-  top: -35em;
-}
-
-.brenda {
-  left: 75em;
-  top: -15em;
-  rotate: 10deg;
-}
-
-.punaise5 {
-  max-width: 10%;
-  height: auto;
-  left: 59em;
-  top: -30em;
-}
-
-.lynda {
-  left: 70em;
-  top: -17em;
-  rotate: -10deg;
-}
-
-.punaise6 {
-  max-width: 10%;
-  height: auto;
-  left: 53em;
-  top: -47em;
-}
-
-.roberta {
-  left: 63em;
-  top: -35em;
-  rotate: -8deg;
-}
-
-.punaise7 {
-  max-width: 10%;
-  height: auto;
-  right: 19.5em;
-  top: -37em;
-}
-
-.triple {
-  top: -20em;
-  right: 10em
-}
-
-.school {
-  left: 70em;
-  max-width: 60%;
-  top: -15em;
-}
-
-.punaise8 {
-  max-width: 10%;
-  height: auto;
-  left: 55em;
-  top: -25em;
-}
-
-.ontsnapping {
-left: 30em;
-top: -38em;
-}
-
-.punaise9 {
-  max-width: 10%;
-  height: auto;
-  left: 20em;
-  top: -48em;
-}
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 
 :root {
-  --color-headings:crimson
+  --color-headings:crimson;
+  --position-relative: relative;
 }
 
 
@@ -287,7 +28,129 @@ h1 {
   color:var(--color-headings);
 }
 
+/* naar een idee van Jen Simmons */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
 
-/* ... */
+body {
+  margin:0;
+  background-image: url("../images/prikbord.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: inherit ;
+  position:absolute;
+}
+
+button:hover {
+  animation: flipV 1s linear;
+}
+
+@keyframes flipV {
+  50%{
+    transform: rotateY(180deg)
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
+
+
+
+button:nth-of-type(1) {
+  background-image: url("../images/baby.png");
+  width: 13em;
+  height: 20em;
+}
+
+
+button:nth-of-type(2) {
+  background-image: url("../images/vw.png");
+  width: 15em;
+  height: 20em;
+  left: 20em;
+  top: 20em;
+}
+
+button:nth-of-type(3) {
+  background-image: url(../images/mugshot.png);
+  width: 14em;
+  height: 20em;
+  left: 50em;
+  top: 5em;
+}
+
+button:nth-of-type(4) {
+  background-image: url(../images/moord1.png);
+  width: 15em;
+  height: 20em;
+  rotate: 10deg;
+  left: 80em;
+  top: 20em;
+}
+
+button:nth-of-type(5) {
+  background-image: url(../images/moord2.png);
+  width: 10em;
+  height: 15em;
+  rotate: -7deg;
+  left: 85em;
+  top: 35em;
+}
+
+button:nth-of-type(6) {
+  background-image: url(../images/moord3.png);
+  width: 10em;
+  height: 20em;
+  rotate: 5deg;
+  left: 95em;
+  top: 25em;
+}
+
+button:nth-of-type(7) {
+  background-image: url(../images/ontsnapping.png);
+  width: 12em;
+  height: 14em;
+  top: 50em;
+  left: 50em;
+}
+
+button:nth-of-type(8) {
+  background-image: url(../images/school.png);
+  width: 21em;
+  height: 12em;
+  top: 5em;
+  left: 100em;
+}
+
+button:nth-of-type(9) {
+  background-image: url(../images/triple_moord.png);
+  width: 12.5em;
+  height: 20em;
+  top: 50em;
+  left: 10em;
+}
+
+
+img {
+  position: relative;
+  max-width: 25%;
+}
+
+section img {
+  position: absolute;
+  rotate: 39deg;
+  top: 2em;
+  left: 2em;
+  
+}
+
 
 
