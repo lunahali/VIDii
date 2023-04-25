@@ -65,14 +65,14 @@ button:hover {
 
 
 button:nth-of-type(1) {
-  background-image: url("../images/baby.png");
+  background-image: url("/images/baby.png");
   width: 13em;
   height: 20em;
 }
 
 
 button:nth-of-type(2) {
-  background-image: url("../images/vw.png");
+  background-image: url("/images/vw.png");
   width: 15em;
   height: 20em;
   left: 20em;
@@ -80,7 +80,7 @@ button:nth-of-type(2) {
 }
 
 button:nth-of-type(3) {
-  background-image: url(../images/mugshot.png);
+  background-image: url(/images/mugshot.png);
   width: 14em;
   height: 20em;
   left: 50em;
@@ -88,7 +88,7 @@ button:nth-of-type(3) {
 }
 
 button:nth-of-type(4) {
-  background-image: url(../images/moord1.png);
+  background-image: url(/images/moord1.png);
   width: 15em;
   height: 20em;
   rotate: 10deg;
@@ -149,7 +149,7 @@ section img {
   rotate: 39deg;
   top: 2em;
   left: 2em;
-  
+
 }
 
 
