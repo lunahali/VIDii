@@ -11,7 +11,7 @@
 
 :root {
   --color-headings:crimson;
-  --position-relative: relative;
+  --white-space:min(5vw, 4rem);
 }
 
 
@@ -38,21 +38,26 @@ body {
   background-image: url("../images/prikbord.jpg");
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: -1000;
 }
 
-button {
+ main > button {
+  list-style: none;
   border: none;
   cursor: pointer;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: inherit ;
   position:absolute;
+  padding:0;
 }
 
-button:hover {
+main > button:hover {
   animation: flipV 1s linear;
 }
-
+/* 
 @keyframes flipV {
   50%{
     transform: rotateY(180deg)
@@ -60,97 +65,457 @@ button:hover {
   to{
     transform: rotateY(360deg);
   }
-}
+} */
 
 
 
-button:nth-of-type(1) {
+main >  button:nth-of-type(1) {
   background-image: url("../images/baby.png");
-  width: 13em;
-  height: 20em;
+  width: min(16vw, 13em);
+  /* height: 20em; */
+  aspect-ratio:13/20;
 }
 
 
-button:nth-of-type(2) {
+main >  button:nth-of-type(2) {
   background-image: url("../images/vw.png");
-  width: 15em;
-  height: 20em;
-  left: 20em;
-  top: 20em;
+  width: min(18vw,15em);
+  aspect-ratio:15/20;
+  /* height: 20em; */
+  left: 20vw;
+  top: 30vh;
 }
 
-button:nth-of-type(3) {
+main >  button:nth-of-type(3) {
   background-image: url(../images/mugshot.png);
-  width: 14em;
-  height: 20em;
-  left: 50em;
-  top: 5em;
+  width: min(15vw,14em);
+  /* height: 20em; */
+  aspect-ratio: 14/20;
+  left: 40vw;
+  top: 10vh;
 }
 
-button:nth-of-type(4) {
+main >  button:nth-of-type(4) {
   background-image: url(../images/moord1.png);
-  width: 15em;
-  height: 20em;
+  width: min(12vw,15em);
+  /* height: 20em; */
+  aspect-ratio: 15/20;
   rotate: 10deg;
-  left: 80em;
-  top: 20em;
+  left: 65vw;
+  top: 28vh;
 }
 
-button:nth-of-type(5) {
+main > button:nth-of-type(5) {
   background-image: url(../images/moord2.png);
-  width: 10em;
-  height: 15em;
+  width: min(10vw, 10em);
+  /* height: 15em; */
+  aspect-ratio: 10/15;
   rotate: -7deg;
-  left: 85em;
-  top: 35em;
+  left: 68vw;
+  top: 50vh;
 }
 
-button:nth-of-type(6) {
+main > button:nth-of-type(6) {
   background-image: url(../images/moord3.png);
-  width: 10em;
-  height: 20em;
+  width: min(8vw, 10em);
+  /* height: 20em; */
+  aspect-ratio: 10/20;
   rotate: 5deg;
-  left: 95em;
-  top: 25em;
+  left: 75vw;
+  top: 35vh;
 }
 
-button:nth-of-type(7) {
+main > button:nth-of-type(7) {
   background-image: url(../images/ontsnapping.png);
-  width: 12em;
-  height: 14em;
-  top: 50em;
-  left: 50em;
+  width: min(10vw, 12em);
+  /* height: 14em; */
+  aspect-ratio: 12/14;
+  top: 70vh;
+  left: 40vw;
 }
 
-button:nth-of-type(8) {
+main > button:nth-of-type(8) {
   background-image: url(../images/school.png);
-  width: 21em;
-  height: 12em;
-  top: 5em;
-  left: 100em;
+  width: min(17vw, 21em);
+  /* height: 12em; */
+  aspect-ratio: 21/12;
+  top: 7vh;
+  left: 78vw;
 }
 
-button:nth-of-type(9) {
+main > button:nth-of-type(9) {
   background-image: url(../images/triple_moord.png);
-  width: 12.5em;
-  height: 20em;
-  top: 50em;
-  left: 10em;
+  width: min(12vw,12.5em);
+  /* height: 20em; */
+  aspect-ratio: 12.5/20;
+  top: 65vh;
+  left: 7vw;
 }
 
 
-img {
+
+/******************************/
+/* DE CAROCARROUSEL CONTAINER */
+/******************************/
+
+.caroCarrousel {
+	/* basis waarden die door de hele carrousel gebruikt worden */
+	/* kun je zelf aanpassen */
+	--caroCarrouselMainColor:#333;
+  --caroCarrouselAccentColor:#1b75b3;
+	--caroCarrouselShadeColor:#ddd9;
+  --caroCarrouselInverseColor:#e48a4c;
+  
+  --caroCarrouselAutoScrollInterval:4000;
+
   position: relative;
-  max-width: 25%;
+  overflow: hidden; /* om de linkbuttons te verbergen */
+	outline:none;
+
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  /* left: 30vw;
+  top: 15vh; */
 }
 
-section img {
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  .caroCarrousel {
+    --caroCarrouselMainColor:#ccc;
+    --caroCarrouselShadeColor:#4449;
+  }
+}
+
+
+/************************************/
+/* de carrousel elementen container */
+.caroCarrousel > ul {
+  width:40em;
+  height:40em;
+  margin: 0; padding: 0;
+  list-style: none;
+	display: flex;
+	
+	/* handmatig scrollen is mogelijk */
+	overflow: hidden;
+	
+	/* snappen als er gescrolled wordt - andere helft bij li */
+  scroll-snap-type: inline mandatory;
+  
+  /* smooth scrollen */
+	scroll-behavior: smooth;
+  
+  /* scrollbar zoveel mogelijk verbergen */
+  -webkit-overflow-scrolling: touch; /* voor iOS*/
+  -ms-overflow-style: none; /* voor IE */
+	scrollbar-width: none; /* voor firefox */
+}
+
+.caroCarrousel > ul::-webkit-scrollbar {
+  /* scrollbar zoveel mogelijk verbergen */
+  display: none; /* voor chrome, safari en edge*/
+}
+
+
+/**************************/
+/* de carrousel elementen */
+.caroCarrousel > ul li {
+
+
+  flex-basis: 100%;
+  flex-shrink: 0;
+  /* snappen als er gescrolled wordt - andere helft bij ul */
+	scroll-snap-align:center;
+
+
+  /* display: grid; */
+  /* place-items:center; */
+}
+
+
+/**********************************/
+/* de carrousel elementen content */
+
+/* de stijlen voor jouw content hier */
+.caroCarrousel > ul li > img {
+  display: block;
+  width: 100%;
+  height:100%;
+  object-fit: contain;
+}
+
+
+/****************/
+/* DE BOLLETJES */
+/****************/
+
+/* de bolletjes container */
+.caroCarrousel nav ul {
   position: absolute;
-  rotate: 39deg;
-  top: 2em;
-  left: 2em;
+	left: 2em; right: 2em;
+	bottom: 0;
+	margin: 0;
+  padding: 0 0 .5em;
+  list-style: none;
+	
+	display: flex;
+/* 	flex-wrap:wrap; */
+  justify-content: center;
+  gap:.4em;
+}
 
+/* een bolletje container */
+.caroCarrousel > nav li {
+	flex-basis: 1.2em;
+	aspect-ratio: 1/1;
+}
+
+/* de bolletjes */
+.caroCarrousel > nav a {
+  display: block;
+  width:100%;
+  height:100%;
+  
+  text-decoration: none;
+	color: var(--caroCarrouselMainColor);
+  background-color: var(--caroCarrouselShadeColor);
+	border-radius: 50%;
+  outline: none;
+	box-shadow: inset 0 0 0 1px currentColor;
+  
+  transition: 0.5s;
+}
+
+.caroCarrousel > nav a:hover,
+.caroCarrousel > nav a:focus {
+  color: var(--caroCarrouselAccentColor);
+}
+
+.caroCarrousel > nav a.current {
+  background-color: currentColor;
 }
 
 
+/****************************/
+/* PREV EN NEXT LINKBUTTONS */
+/****************************/
+.caroCarrousel > a {
+  position: absolute;
+  width: 3em;
+  aspect-ratio:1/1;
+	top: calc(50% - 1.5em);
+  
+  color: var(--caroCarrouselMainColor);
+  background-color: var(--caroCarrouselShadeColor);
+  outline: none;
+	box-shadow: inset 0 0 0 1px currentColor;
+	
+  display:grid;
+  place-items:center;
+  
+  transition: 0.5s;
+}
 
+/* initieel staan de links "buiten beeld" */
+.caroCarrousel > a[href="previous"] {
+  left:-3.5em;
+}
+.caroCarrousel > a[href="next"] {
+  right: -3.5em;
+}
+
+/* bij hover en focus schuiven de links in beeld */
+.caroCarrousel:hover > a[href="previous"],
+.caroCarrousel:focus-within > a[href="previous"] {
+  left:.5em;
+}
+.caroCarrousel:hover > a[href="next"],
+.caroCarrousel:focus-within > a[href="next"] {
+  right:.5em;
+}
+
+/* prev en next linkbuttons pijltjes */
+.caroCarrousel > a::before,
+.caroCarrousel > a::after {
+  content: "";
+  position: absolute;
+  width: 1em; height: 4px;
+  background-color: currentColor;
+}
+
+.caroCarrousel > a[href=previous]::before {
+	transform-origin: 2px center;
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrousel > a[href=previous]::after {
+	transform-origin: 2px center;
+	transform: translateY(0) rotate(-45deg);
+}
+
+.caroCarrousel > a[href=next]::before {
+	transform-origin: calc(100% - 2px) center;
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrousel > a[href=next]::after {
+	transform-origin: calc(100% - 2px) center;
+	transform: translateY(0) rotate(-45deg);
+}
+
+.caroCarrousel > a:hover,
+.caroCarrousel > a:focus {
+  color: var(--caroCarrouselAccentColor);
+}
+
+
+/*********************/
+/* PLAY/PAUSE BUTTON */
+/*********************/
+
+.caroCarrousel > button {
+  position: absolute;
+  right: .5em;
+  bottom: .5em;
+  
+  width: 1.2em;
+  aspect-ratio:1/1;
+  padding:0;
+  
+  font-size:inherit;
+  appearance: none;
+  background-color: var(--caroCarrouselShadeColor);
+
+  border: none;
+	outline: none;
+	box-shadow: inset 0 0 0 1px currentColor;
+	cursor: pointer;
+	
+  transition: 0.5s;
+
+	display: flex;
+  justify-content: center;
+	align-items: center;
+}
+
+.caroCarrousel > button:hover,
+.caroCarrousel > button:focus {
+  color: var(--caroCarrouselAccentColor);
+}
+
+/* play/pause button */
+.caroCarrousel > button::before,
+.caroCarrousel > button::after {
+  content: "";
+  position: absolute;
+  width: .5em; height: 2px;
+  background-color: currentColor;
+  transform-origin: calc(100% - 1px) center;
+  transition:transform 0.5s;
+}
+
+/* indien niet aan het auto-scrollen */
+/* de streepjes vormen een play-icoon */
+.caroCarrousel > button::before {
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrousel > button::after {
+	transform: translateY(0) rotate(-45deg);
+}
+
+/* indien aan het auto-scrollen */
+/* de streepjes vormen een pauze-icoon */
+.caroCarrousel.autoScrolling > button::before {
+	transform: translateY(-2px);
+}
+.caroCarrousel.autoScrolling > button::after {
+	transform: translateY(2px);
+}
+
+/* in de button draait een 'eierwekker' */
+.caroCarrousel.autoScrolling > button {
+	animation-name: carrouselAutoScrollingButton;
+  animation-duration: calc(var(--caroCarrouselAutoScrollInterval) * 1ms);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes carrouselAutoScrollingButton {
+	0%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 0%, transparent 0%); }
+	2%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 2%, transparent 0%); }
+	4%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 4%, transparent 0%); }
+	6%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 6%, transparent 0%); }
+	8%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 8%, transparent 0%); }
+	
+	10%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 10%, transparent 0%); }
+	12%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 12%, transparent 0%); }
+	14%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 14%, transparent 0%); }
+	16%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 16%, transparent 0%); }
+	18%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 18%, transparent 0%); }
+
+	20%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 20%, transparent 0%); }
+	22%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 22%, transparent 0%); }
+	24%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 24%, transparent 0%); }
+	26%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 26%, transparent 0%); }
+	28%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 28%, transparent 0%); }
+
+	30%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 30%, transparent 0%); }
+	32%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 32%, transparent 0%); }
+	34%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 34%, transparent 0%); }
+	36%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 36%, transparent 0%); }
+	38%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 38%, transparent 0%); }
+
+	40%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 40%, transparent 0%); }
+	42%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 42%, transparent 0%); }
+	44%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 44%, transparent 0%); }
+	46%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 46%, transparent 0%); }
+	48%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 48%, transparent 0%); }
+
+	50%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 50%, transparent 0%); }
+	52%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 52%, transparent 0%); }
+	54%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 54%, transparent 0%); }
+	56%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 56%, transparent 0%); }
+	58%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 58%, transparent 0%); }
+
+	60%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 60%, transparent 0%); }
+	62%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 62%, transparent 0%); }
+	64%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 64%, transparent 0%); }
+	66%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 66%, transparent 0%); }
+	68%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 68%, transparent 0%); }
+
+	70%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 70%, transparent 0%); }
+	72%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 72%, transparent 0%); }
+	74%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 74%, transparent 0%); }
+	76%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 76%, transparent 0%); }
+	78%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 78%, transparent 0%); }
+
+	80%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 80%, transparent 0%); }
+	82%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 82%, transparent 0%); }
+	84%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 84%, transparent 0%); }
+	86%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 86%, transparent 0%); }
+	88%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 88%, transparent 0%); }
+
+	90%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 90%, transparent 0%); }
+	92%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 92%, transparent 0%); }
+	94%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 94%, transparent 0%); }
+	96%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 96%, transparent 0%); }
+	98%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 98%, transparent 0%); }
+	
+	100%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 100%, transparent 0%); }
+}
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
