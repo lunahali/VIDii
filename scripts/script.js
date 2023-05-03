@@ -2,26 +2,6 @@
 
 
 
-// var button = document.getElementById("buttonTedVW");
-// var overlay = document.getElementById("overlayVW");
-// var popup = document.getElementById("popupVW");
-// var close = document.getElementById("closeButtonVW");
-
-// button.onclick = function() {
-//   overlay.style.display = "block";
-// }
-
-// close.onclick = function() {
-//   overlay.style.display = "none";
-// }
-
-// overlay.onclick = function(event) {
-//   if (event.target == overlay) {
-//     overlay.style.display = "none";
-//   }
-// }
-
-
 
 var buttons = document.querySelectorAll("button[data-target]");
 var popups = document.querySelectorAll(".popup");
