@@ -1,21 +1,10 @@
-# Procesverslag
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
-
-
-
 ## Jij
 
 ### Ontwerper:
-Sanne 't Hooft (vervangen door jouw naam)
+Luna Hali
 
 #### Je startniveau:
-Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
+Mijn startniveau is: blauw
 
 
 
@@ -26,15 +15,14 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/dummy-plaatje.jp" width="375px" alt="eerste versie/schets">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Het begrijpen van codetaal die online staat, die ik wil gebruiken
+  - Meer leren van javascript
+  - Mijn niveau naar een hoger level brengen
  
 </details>
 
