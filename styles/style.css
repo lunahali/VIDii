@@ -12,6 +12,11 @@
 :root {
   --color-headings:crimson;
   --white-space:min(5vw, 4rem);
+  --background-popups-color: #FFE53B;
+  --background-popups-gradient: linear-gradient(189deg, #FFE53B 38%, #FF2525 75%);
+
+
+  
 }
 
 
@@ -122,7 +127,6 @@ main >  button:nth-of-type(4) {
   width: min(20vw,30em);
   /* height: 20em; */
   aspect-ratio: 20/25;
-  rotate: 10deg;
   left: 65vw;
   top: 28vh;
 }
@@ -184,7 +188,11 @@ main > button:nth-of-type(7) {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
-
+  background-color: --background-popups-color;
+  background-image: var(--background-popups-gradient);
+  width: 45em;
+  height: 45em;
+  justify-content: center ;
 }
 
 /* dark mode */
@@ -525,14 +533,30 @@ De popups voor de foto's
   top: 20%;
   left: 50%;
   transform: translate(-50%, 50%);
-  background-color: #fff;
   padding: 20px;
-  border: 1px solid #ccc;
   display: none;
+  background-color: --background-popups-color;
+  background-image: var(--background-popups-gradient);
+
 }
 
 .closeButton {
   position: absolute;
-  top: 10px;
+  top: .1em;
   right: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
+
+h2 {
+  font-family: Bloody;
+  color: red;
+}
+
+p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: larger;
+}
+

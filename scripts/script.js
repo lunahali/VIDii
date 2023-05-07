@@ -28,6 +28,9 @@ for (var i = 0; i < buttons.length; i++) {
 
   closeButtons[i].addEventListener("click", function() {
     var popupId = this.parentNode.getAttribute("id");
+    if(!popupId.includes("popup")) {
+        popupId = this.parentNode.parentNode.getAttribute("id");
+    }
     var popup = document.getElementById(popupId);
     closePopup(popup);
   });
