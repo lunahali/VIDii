@@ -623,7 +623,7 @@ path:hover {
 }
 
 
-/* Styling van de box als je over de staten hovert */
+/* Styling van de box als je over de staten */
 #details-box {
   box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.7);
   opacity: 0%;
