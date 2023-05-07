@@ -35,26 +35,20 @@ Mijn startniveau is: blauw
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
 
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Isabelle was enthousiast over het idee en vond het ook een orgineel idee.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik heb hier niet echt een oplossing voor. Ik ben wel verder gegaan met het idee wat ik had, aangezien ik bevestiging heb gekregen dat het een goed concept is.
 
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Het enige wat Isabelle zich afvroeg of ik het allemaal voor elkaar zou krijgen. 
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 3:
-  ...
+  Ik ben gaan spelen met de ideeën die ik had, en ben er achter gekomen dat niet alles lukte, maar ben blij met wat ik voor elkaar hebb gekregen.
 
 </details>
-
 
 
 
@@ -64,23 +58,33 @@ Mijn startniveau is: blauw
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
   
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Nadia heeft mij erop gewezen dat ik sommige divs kon vervangen voor sections. 
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik heb de divjes die ik kon vervangen veranders naar sections.
 
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Nadia heeft mij erop gewezen dat het handiger is om buttons te gebruiken ipv a en img. 
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik heb de a'tjes veranderd naar button. In de css heb ik een background img aan alle buttons gegeven. Ik heb de buttons gestyled door :nth-of-type.
 
 
 
   ### Bevinding 3:
-  ...
+  Ik liep vast met mijn carousel. Ik heb hiervoor hulp gevraagd bij Sanne.
+
+  ### oplossing:
+  Sanne heeft mij geholpen. Ik had in mijn css de element img en button aanstaan. Die sprak dus alle images en buttons aan. Dit hebben we aangepast door de images en buttons aan te passen door main > buttons en main > img.
+  
+  ### Bevinding 4: 
+  Ik kwam erachter dat ik nog niet mijn focus en active etc. heb aangepast.
+  
+  ### oplossing:
+  Ik heb de focus aangepast door middel van een animatie
+  
 
 </details>
 
