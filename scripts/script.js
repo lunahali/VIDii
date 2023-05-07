@@ -1,4 +1,7 @@
 // JavaScript Document
+
+// JS VOOR DE INTERACTIEVE MAP VAN AMERIKA 
+
 var detailsBox = document.getElementById('details-box');
 
 document.addEventListener('mouseover', function (e) {
@@ -19,6 +22,12 @@ window.onmousemove = function (e) {
   detailsBox.style.left = (x) + 'px';
 };
 
+
+
+
+
+
+// JS VOOR DE POPUPS (GESCHREVEN MET BEHULP VAN EEN VRIEND)
 var buttons = document.querySelectorAll("button[data-target]");
 var popups = document.querySelectorAll(".popup");
 var closeButtons = document.querySelectorAll(".closeButton");

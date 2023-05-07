@@ -14,9 +14,6 @@
   --white-space:min(5vw, 4rem);
   --background-popups-color: #FFE53B;
   --background-popups-gradient: linear-gradient(189deg, #FFE53B 38%, #FF2525 75%);
-
-
-  
 }
 
 
@@ -39,8 +36,6 @@ h1 {
 }
 
 
-
-
 body {
   margin:0;
   background-image: url("../images/prikbord.jpg");
@@ -57,7 +52,9 @@ body {
 
 
 
-/* Styling van de butttons */
+/*********************** 
+STYLING VAN DE BUTTONS
+************************/
  main > button {
   list-style: none;
   border: none;
@@ -76,8 +73,10 @@ body {
 
 
 
+
+
 /* ***************************************
-Styling van de foto's op het prikbord
+STYLING VAN DE FOTO'S OP HET PRIKBOORD
 *************************************** */
 
 
@@ -100,7 +99,6 @@ main >  button:focus {
   main >  button:nth-of-type(1) {
     background-image: url("../images/baby.png");
     width: min(16vw, 13em);
-    /* height: 20em; */
     aspect-ratio:13/20;
   }
 
@@ -108,7 +106,6 @@ main >  button:nth-of-type(2) {
   background-image: url("../images/vw.png");
   width: min(18vw,15em);
   aspect-ratio:15/20;
-  /* height: 20em; */
   left: 20vw;
   top: 30vh;
 }
@@ -116,7 +113,6 @@ main >  button:nth-of-type(2) {
 main >  button:nth-of-type(3) {
   background-image: url(../images/mugshot.png);
   width: min(15vw,14em);
-  /* height: 20em; */
   aspect-ratio: 14/20;
   left: 40vw;
   top: 10vh;
@@ -125,7 +121,6 @@ main >  button:nth-of-type(3) {
 main >  button:nth-of-type(4) {
   background-image: url(../images/moorden.png);
   width: min(20vw,30em);
-  /* height: 20em; */
   aspect-ratio: 20/25;
   left: 60vw;
   top: 18vh;
@@ -135,7 +130,6 @@ main >  button:nth-of-type(4) {
 main > button:nth-of-type(5) {
   background-image: url(../images/ontsnapping.png);
   width: min(10vw, 12em);
-  /* height: 14em; */
   aspect-ratio: 12/14;
   top: 70vh;
   left: 40vw;
@@ -144,7 +138,6 @@ main > button:nth-of-type(5) {
 main > button:nth-of-type(6) {
   background-image: url(../images/school.png);
   width: min(17vw, 21em);
-  /* height: 12em; */
   aspect-ratio: 21/12;
   top: 7vh;
   left: 78vw;
@@ -153,11 +146,13 @@ main > button:nth-of-type(6) {
 main > button:nth-of-type(7) {
   background-image: url(../images/triple_moord.png);
   width: min(12vw,12.5em);
-  /* height: 20em; */
   aspect-ratio: 12.5/20;
   top: 65vh;
   left: 7vw;
 }
+
+
+
 
 
 
@@ -523,9 +518,11 @@ main > button:nth-of-type(7) {
 
 
 /* *************************
-De popups voor de foto's
+DE POPUP'S BIJ DE FOTO'S
 ************************* */
 
+
+/* Zorgt ervoor dat er een wazige achtergrond komt als er op een popup wordt geklikt */
 #background-blur {
   position: fixed;
   top: 0;
@@ -537,6 +534,8 @@ De popups voor de foto's
   display: none;
 }
 
+
+/* Styling van de popup */
 .popup {
   position: fixed;
   top: 50%;
@@ -547,9 +546,9 @@ De popups voor de foto's
   display: none;
   background-color: --background-popups-color;
   background-image: var(--background-popups-gradient);
-
 }
 
+/* Styling van de sluiten knop */
 .closeButton {
   position: absolute;
   top: .1em;
@@ -560,6 +559,8 @@ De popups voor de foto's
   cursor: pointer;
 }
 
+
+/* Styling van de tekst */
 @font-face {
   font-family: "bloody";
   src: url("../fonts/bloody-webfont.woff");
@@ -576,6 +577,15 @@ p {
 }
 
 
+
+
+
+
+/************************************ 
+DE INTERACTIEVE MAP VAN AMERICA BRON: https://codepen.io/codecustard/pen/NWpZxey
+*************************************/
+
+/* Styling van de map */
 path {
   stroke: white;
   fill:paleturquoise !important;
@@ -584,18 +594,14 @@ path {
   transform-origin: center center;
 }
 
-path > #WA:hover {
- fill: green !important;
- cursor: pointer;
- transform: scale(1.005, 1.005);
-}
-
+/* Zorgt ervoor dat de staten waar Ted niet heeft vermoord rood worden */
 path:hover {
   fill: red !important;
   cursor: pointer;
   transform: scale(1.005, 1.005);
 }
 
+/* Zorgt ervoor dat de steden waar Ted vermoord heeft, groen worden */
 #WA:hover, #UT:hover,
 #CO:hover, #FL:hover,
 #OR:hover, #ID:hover,
@@ -605,12 +611,8 @@ path:hover {
   transform: scale(1.005, 1.005);
  }
 
-/* #map-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
+/* Styling map */
 #us-map {
   display: block;
   position: absolute;
@@ -620,6 +622,8 @@ path:hover {
   height: 30%;
 }
 
+
+/* Styling van de box als je over de staten hovert */
 #details-box {
   box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.7);
   opacity: 0%;
