@@ -97,23 +97,25 @@ Mijn startniveau is: blauw
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
   
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Er staat in de titel geen Ted Bundy.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  Ik heb in de titel Ted Bundy toegoevoegd.
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Ik had meerder html bestanden.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik heb de html bestanden samengevoegd.
 
 
 
   ### Bevinding 3:
-  ...
+  Sommige uitlijning van de html waren niet goed uitgelijnd. 
+  
+  #### Oplossing:
+  Ik heb de uitlijning aangepast.
 
 </details>
 
@@ -159,6 +161,5 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 6. https://fonts.google.com/specimen/Bebas+Neue (Bebas Neue font)
 7. https://www.dafont.com/bloody.font (Bloody font)
 8. https://cssgradient.io/swatches/ (voor de gradient tijdens de popups)
-9. 
 
 </details>
