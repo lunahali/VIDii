@@ -126,19 +126,19 @@ Mijn startniveau is: blauw
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
+  <img src="readme-images/eindresultaat.jpg" width="375px" alt="final ontwerp">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Ik heb geleerd hoe je popups moet maken. Ik heb geprobeerd de carousel zo goed mogelijk te begrijpen. Ik ben meer te weten gekomen over codetaal.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Ik wilde eigenlijk wat meer animaties toevoegen, maar dat lukte niet zoals ik wilde.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/eon.jpg" width="375px" alt="bummer">
 </details>
 
 
@@ -151,8 +151,14 @@ Mijn startniveau is: blauw
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://nl.wikipedia.org/wiki/Ted_Bundy (informatie over Ted)
+2. https://isgeschiedenis.nl/nieuws/seriemoordenaar-ted-bundy (informatie over Ted)
+3. https://codepen.io/shooft/pen/KKgXJVm (caroussel)
+4. https://codepen.io/codecustard/pen/NWpZxey (interactieve map)
+5. https://chat.openai.com/ (heeft mij geholpen met het maken van de popups, ik vroeg om een bron en hij verwees naar zichzelf)
+6. https://fonts.google.com/specimen/Bebas+Neue (Bebas Neue font)
+7. https://www.dafont.com/bloody.font (Bloody font)
+8. https://cssgradient.io/swatches/ (voor de gradient tijdens de popups)
+9. 
 
 </details>
