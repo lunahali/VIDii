@@ -55,15 +55,71 @@ body {
 /*********************** 
 STYLING VAN DE BUTTONS
 ************************/
- main > button {
+main > ol li {
+  list-style: none;
+  position: absolute;
+  
+}
+
+main > ol li img {
+  position: absolute;
+  filter: drop-shadow(.25em .55em .5em #0009);
+
+}
+
+main > ol li img:nth-of-type(1) {
+  width: min(20vw, 15em);
+}
+
+main > ol li:nth-of-type(2) {
+  /* width: min(25vw,25em); */
+  left: 20vw;
+  top: 35vh;
+}
+
+main > ol li:nth-of-type(3) {
+  width: min(15vw,14em);
+  left: 40vw;
+  top: 10vh;
+}
+
+main > ol li:nth-of-type(4) {
+  width: min(25vw,35em);
+  left: 60vw;
+  top: 18vh;
+}
+
+main > ol li:nth-of-type(5) {
+  width: min(10vw, 12em);
+  top: 70vh;
+  left: 40vw;
+}
+
+
+main > ol li:nth-of-type(6) {
+  width: min(17vw, 21em);
+  top: 7vh;
+  left: 78vw;
+}
+
+
+main > ol li:nth-of-type(7) {
+  width: min(12vw,12.5em);
+  top: 65vh;
+  left: 7vw;
+}
+
+
+
+ main > ol li button {
   list-style: none;
   border: none;
   cursor: pointer;
-  background-size: cover;
   background-repeat: no-repeat;
   background-color: inherit ;
   position:absolute;
   padding:0;
+
 }
 
 
@@ -80,8 +136,11 @@ STYLING VAN DE FOTO'S OP HET PRIKBOORD
 *************************************** */
 
 
-main >  button:focus {
+main > ol li button:focus {
     animation: focus-animation 0.5s;
+    outline:none;
+    /* box-shadow: 0 0 .5em black; */
+    filter: drop-shadow(.25em .55em .65em #000c);
   }
   
   @keyframes focus-animation {
@@ -96,60 +155,60 @@ main >  button:focus {
     }
   }
 
-  main >  button:nth-of-type(1) {
+  /* main ol li >  button:nth-of-type(1) {
     background-image: url("../images/baby.png");
     width: min(16vw, 13em);
     aspect-ratio:13/20;
-  }
+  } */
 
-main >  button:nth-of-type(2) {
+/* main ol li>  button:nth-of-type(2) {
   background-image: url("../images/vw.png");
   width: min(18vw,15em);
   aspect-ratio:15/20;
   left: 20vw;
   top: 30vh;
-}
+} */
 
-main >  button:nth-of-type(3) {
+/* main ol li  > button:nth-of-type(3) {
   background-image: url(../images/mugshot.png);
   width: min(15vw,14em);
   aspect-ratio: 14/20;
   left: 40vw;
   top: 10vh;
-}
+} */
 
-main >  button:nth-of-type(4) {
+/* main ol li >  button:nth-of-type(4) {
   background-image: url(../images/moorden.png);
   width: min(20vw,30em);
   aspect-ratio: 20/25;
   left: 60vw;
   top: 18vh;
-}
+} */
 
 
-main > button:nth-of-type(5) {
+/* main ol li > button:nth-of-type(5) {
   background-image: url(../images/ontsnapping.png);
   width: min(10vw, 12em);
   aspect-ratio: 12/14;
   top: 70vh;
   left: 40vw;
-}
+} */
 
-main > button:nth-of-type(6) {
+/* main ol li > button:nth-of-type(6) {
   background-image: url(../images/school.png);
   width: min(17vw, 21em);
   aspect-ratio: 21/12;
   top: 7vh;
   left: 78vw;
-}
+} */
 
-main > button:nth-of-type(7) {
+/* main ol li > button:nth-of-type(7) {
   background-image: url(../images/triple_moord.png);
   width: min(12vw,12.5em);
   aspect-ratio: 12.5/20;
   top: 65vh;
   left: 7vw;
-}
+} */
 
 
 
@@ -183,7 +242,7 @@ main > button:nth-of-type(7) {
   top: -35vh;
   left: -20vw;
   background-color: --background-popups-color;
-  background-image: var(--background-popups-gradient);
+  background-image: url("../images/achtergrond-moorden.png");
   width: 45em;
   height: 45em;
   justify-content: center ;
@@ -382,7 +441,7 @@ main > button:nth-of-type(7) {
 /* PLAY/PAUSE BUTTON */
 /*********************/
 
-.caroCarrousel > button {
+.caroCarrousel > button:nth-of-type(1) {
   position: absolute;
   right: .5em;
   bottom: .5em;
@@ -393,7 +452,7 @@ main > button:nth-of-type(7) {
   
   font-size:inherit;
   appearance: none;
-  background-color: var(--caroCarrouselShadeColor);
+  background-image: "./";
 
   border: none;
 	outline: none;
@@ -407,14 +466,14 @@ main > button:nth-of-type(7) {
 	align-items: center;
 }
 
-.caroCarrousel > button:hover,
-.caroCarrousel > button:focus {
+.caroCarrousel > button:nth-of-type(1):hover,
+.caroCarrousel > button:nth-of-type(1):focus {
   color: var(--caroCarrouselAccentColor);
 }
 
 /* play/pause button */
-.caroCarrousel > button::before,
-.caroCarrousel > button::after {
+.caroCarrousel > button:nth-of-type(1)::before,
+.caroCarrousel > button:nth-of-type(1)::after {
   content: "";
   position: absolute;
   width: .5em; height: 2px;
@@ -425,24 +484,24 @@ main > button:nth-of-type(7) {
 
 /* indien niet aan het auto-scrollen */
 /* de streepjes vormen een play-icoon */
-.caroCarrousel > button::before {
+.caroCarrousel > button:nth-of-type(1)::before {
 	transform: translateY(0) rotate(45deg);
 }
-.caroCarrousel > button::after {
+.caroCarrousel > button:nth-of-type(1)::after {
 	transform: translateY(0) rotate(-45deg);
 }
 
 /* indien aan het auto-scrollen */
 /* de streepjes vormen een pauze-icoon */
-.caroCarrousel.autoScrolling > button::before {
+.caroCarrousel.autoScrolling > button:nth-of-type(1)::before {
 	transform: translateY(-2px);
 }
-.caroCarrousel.autoScrolling > button::after {
+.caroCarrousel.autoScrolling > button:nth-of-type(1)::after {
 	transform: translateY(2px);
 }
 
 /* in de button draait een 'eierwekker' */
-.caroCarrousel.autoScrolling > button {
+.caroCarrousel.autoScrolling > button:nth-of-type(1) {
 	animation-name: carrouselAutoScrollingButton;
   animation-duration: calc(var(--caroCarrouselAutoScrollInterval) * 1ms);
   animation-timing-function: linear;
@@ -536,6 +595,12 @@ DE POPUP'S BIJ DE FOTO'S
 
 
 /* Styling van de popup */
+
+/* #popup5 {
+  background-image: url(../images/krantenartikel-ontsnapping.png);
+} */
+
+
 .popup {
   position: fixed;
   top: 50%;
@@ -544,20 +609,32 @@ DE POPUP'S BIJ DE FOTO'S
   padding: 20px;
   z-index: 9999;
   display: none;
-  background-color: --background-popups-color;
-  background-image: var(--background-popups-gradient);
 }
+
+.popup > img {
+  width: 90%;
+  padding-left: 9em;
+}
+
+
 
 /* Styling van de sluiten knop */
 .closeButton {
   position: absolute;
-  top: .1em;
-  right: 10px;
+  top: 2em;
+  right: 8em;
   font-family: "Bebas Neue", sans-serif;
   background: none;
   border: none;
   cursor: pointer;
 }
+
+
+
+/* #popup5 img {
+  width: 90%;
+  padding-left: 9em;
+} */
 
 
 /* Styling van de tekst */
